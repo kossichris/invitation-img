@@ -1,0 +1,45 @@
+body {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.container {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.invitation-cont {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 40%;
+    max-width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 1rem auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    img {
+        width: 100%;
+    }
+    .invitation-cont {
+        display: flex;
+        justify-content: center;
+        flex-grow: 4; /* default 0 */
+
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+
+    }
+}
