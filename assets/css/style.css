@@ -4,11 +4,19 @@ body {
     max-width: 100%;
     box-sizing: border-box;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    background: #eecf8c;
+    height: 100%;
+}
+html {
+    width: 100%;
+    height: 100%;
 }
 .container {
     display: flex;
+    align-items: center;
     width: 100%;
     flex-flow: row wrap;
+    vertical-align: middle;
 }
 
 .invitation-cont {
@@ -16,9 +24,236 @@ body {
     justify-content: center;
 }
 
-img {
+.main-img {
     width: 40%;
     max-width: 40%;
+    position: absolute;
+    top: 16%;
+    left: 30%;
+}
+
+/**
+@slide
+*/
+
+
+
+/**
+@header
+*/
+
+header {
+    height: 26px;
+    width: 100%;
+    background: rgb(71 82 93 / 45%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 12px;
+    height: 49px;
+    min-height: 49px;
+}
+
+/**
+@footer
+*/
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 1%;
+    text-align: center;
+    width: 100%;
+    left: 0;
+}
+.menu {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+}
+
+.signature {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+}
+.signature {
+    color: black;
+}
+.menu-img {
+    width: 94%;
+}
+.chat-img {
+    width: 94%;
+}
+.user-img {
+    width: 94%;
+}
+.note-img {
+    width: 94%;
+}
+.pop-div {
+    font-size: 13px;
+    font-size: 13px;
+    background: #4e4c67;
+    padding: 16px;
+    border-radius: 40px;
+    height: 4em;
+    width: 4em;
+}
+.music {
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+}
+.fab-msg,
+.fab-confirm {
+    font-size: 13px;
+    font-size: 13px;
+    background: #4e4c67;
+    padding: 16px;
+    border-radius: 40px;
+    height: 4em;
+    width: 4em;
+    margin-bottom: 9px;
+}
+.pop-title {
+    display: none;
+    color: blue;
+    font-size: 15px;
+    border-radius: 40em;
+}
+.pop-content {
+    display: none;
+    color: red;
+    font-size: 10px;
+}
+
+/**
+@modal
+*/
+
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#myModalChat {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-header1,
+.modal-body1,
+.modal-footer1 {
+    width: 27%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-header2,
+.modal-body2,
+.modal-footer2 {
+    width: 21%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-btn {
+    -webkit-appearance: media-volume-sliderthumb;
+    background: #ffcd92;
+}
+.modal-btn2 {
+    -webkit-appearance: media-volume-sliderthumb;
+    background: #ffcd92;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Modal Header */
+.modal-header1,
+.modal-header2 {
+    padding: 2px 16px;
+    background-color: #ffcd92;
+    color: black;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.modal-header2 {
+    margin-top: 12%;
+}
+
+/* Modal Body */
+.modal-body1,
+.modal-body2 {
+    padding: 2px 16px;
+    background-color: #e9ecef;
+}
+
+/* Modal Footer */
+.modal-footer1,
+.modal-footer2 {
+    padding: 2px 16px;
+    background-color: #e9ecef;
+    color: white;
+    padding: 29px;
+}
+
+/* Modal Content */
+.modal-content1 {
+    position: relative;
+    background-color: #ffff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+/* Modal Content */
+.modal-content2 {
+    position: relative;
+    background-color: #ffff;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 22%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -30,16 +265,62 @@ img {
     }
     img {
         width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
+
     .invitation-cont {
         display: flex;
         justify-content: center;
         flex-grow: 4; /* default 0 */
-
+    }
+    .block1,
+    .block2 {
+        flex-grow: 1;
     }
     img {
         width: 100%;
         max-width: 100%;
+    }
 
+    .main-img {
+        width: 40%;
+        max-width: 40%;
+        position: absolute;
+        top: 22%;
+        left: 0;
+    }
+
+    /**
+@modal
+*/
+
+    textarea {
+        width: 100%;
+    }
+    .modal-header2,
+    .modal-body2,
+    .modal-footer2,
+    .modal-header1,
+    .modal-body1,
+    .modal-footer1 {
+        width: 99%;
+    }
+
+    .modal-header1,
+    .modal-body1,
+    .modal-footer1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-btn{
+        margin-top: 12px;
+    }
+
+    .signature {
+        position: absolute;
+        bottom: 0;
+        left: 30%;
     }
 }

@@ -1,30 +1,162 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title></title>
-        <meta name="description" content="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title></title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="assets/css/style.css">
-    </head>
+</head>
 
-    <body>
-     
-        <div class="container">
-            <div class="block1">
+<body>
 
+    <header>
+        <nav>
+            <div class="overlay">
+                Mr et Mme Julienne SOTO
             </div>
-            <div class="invitation-cont">
-                <img src="/assets/img/Carte invitation H-B S.png" alt="">
+        </nav>
+    </header>
+    <div class="container">
+        <div class="block1">
+
+        </div>
+
+        <div class="invitation-cont">
+            <div id="slideshow">
+                <div>
+                    <img class="main-img mySlides w3-animate-fading" src="/assets/img/Carte invitation H-B S.png" alt="">
+                </div>
+                <div>
+                    <img class="main-img mySlides w3-animate-fading" src="/assets/img/icard.jpeg" alt="">
+                </div>
             </div>
-            <div class="block2">
+
+        </div>
+        <div class="block2">
+
+        </div>
+    </div>
+    <div>
+
+        <!-- Modal content -->
+        <div id="myModal" class="modal-content1">
+            <div class="modal-header1">
+                <span class="close1">&times;</span>
+                <h2>Confirmation</h2>
+            </div>
+            <!--div class="modal-body1">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div-->
+            <div class="modal-footer1">
+                <button class="modal-btn">Je serai présent(e)</button>
+                <button class="modal-btn">Je serai absent(e)</button>
 
             </div>
         </div>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    </body>
+        <!-- Modal content -->
+        <div id="myModalChat" class="modal-content2">
+            <div class="modal-header2">
+                <span class="close2">&times;</span>
+                <h4>Envoyer un Message</h4>
+            </div>
+            <div class="modal-body2">
+                <textarea name="" id="" cols="30" rows="4"></textarea>
+            </div>
+            <div class="modal-footer2">
+                <button class="modal-btn2">Envoyer</button>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="button-container">
+
+
+        <div class="menu">
+            <div id="fab-msg" class="fab-msg">
+                <a id="myBtnChat">
+                    <img class="chat-img" src="/assets/img/speech-bubble.png" alt="">
+                </a>
+            </div>
+            <div id="fab-confirm" class="fab-confirm">
+                <!--button id="myBtn">open</button-->
+                <a id="myBtn">
+                    <img class="user-img" src="/assets/img/user.png" alt="">
+                </a>
+            </div>
+            <div class="pop-div">
+                <a id="poplink" style="color: #ffff;">
+                    <img class="menu-img" src="/assets/img/menu.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="signature">
+            Designed by Lyatos
+        </div>
+        <div class="music-btn">
+            <div class="pop-div music">
+                <a id="poplink" style="color: #ffff;" href="javascript:void(0);">
+                    <img class="note-img" src="/assets/img/musical-note.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        var msg = document.getElementById('fab-msg');
+        msg.style.visibility = "hidden";
+        msg.style.display = "none";
+        var confirme = document.getElementById('fab-confirm');
+        confirme.style.visibility = "hidden";
+        confirme.style.display = "none";
+        var poplink = document.getElementById('poplink')
+        poplink.onclick = function () {
+            if (msg.style.display === 'none' && msg.style.visibility === "hidden") { msg.style.display = "block"; msg.style.visibility = "visible"; }
+            else {
+                msg.style.display = "none"; msg.style.visibility = "hidden";
+            }
+            if (confirme.style.display === 'none' && confirme.style.visibility === "hidden") { confirme.style.display = "block"; confirme.style.visibility = "visible"; }
+            else {
+                confirme.style.display = "none"; confirme.style.visibility = "hidden";
+            }
+        }
+    </script>
+    <script>
+
+        var slideIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 10000); // Change image every 2 seconds
+        }
+    </script>
+    <script src="/assets/js/main.js"></script>
+</body>
+
 </html>
