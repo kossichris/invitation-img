@@ -7,10 +7,8 @@
 
     <title></title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,7 +28,8 @@
         <div class="invitation-cont">
             <div id="slideshow">
                 <div>
-                    <img class="main-img mySlides w3-animate-fading" src="/assets/img/Carte invitation H-B S.png" alt="">
+                    <img class="main-img mySlides w3-animate-fading" src="/assets/img/Carte invitation H-B S.png"
+                        alt="">
                 </div>
                 <div>
                     <img class="main-img mySlides w3-animate-fading" src="/assets/img/icard.jpeg" alt="">
@@ -50,10 +49,11 @@
                 <span class="close1">&times;</span>
                 <h2>Confirmation</h2>
             </div>
-            <!--div class="modal-body1">
-                <p>Some text in the Modal Body</p>
-                <p>Some other text...</p>
-            </div-->
+            <div class="modal-body1">
+                <p class="confirmation-txt">
+                    Confirmez votre présence à l'événement avant le 15 août 2021
+                </p>
+            </div>
             <div class="modal-footer1">
                 <button class="modal-btn">Je serai présent(e)</button>
                 <button class="modal-btn">Je serai absent(e)</button>
@@ -111,16 +111,26 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <div id="overlayer">
+    </div>
+    <div id="preloader" class="preloader">
+
+        <div class="loaderContainer">
+            <div class="invitation-title">
+                Invitation
+            </div>
+            <div class="invitation-msg">
+                Mr et Mme Julienne SOTO
+            </div>
+        </div>
+
+        <div class="footer-logo">
+            Lyatos
+        </div>
+    </div>
+
     <script>
+        //POPOVER
         var msg = document.getElementById('fab-msg');
         msg.style.visibility = "hidden";
         msg.style.display = "none";
@@ -140,7 +150,7 @@
         }
     </script>
     <script>
-
+        //SLIDES
         var slideIndex = 0;
         carousel();
 
@@ -156,7 +166,19 @@
             setTimeout(carousel, 10000); // Change image every 2 seconds
         }
     </script>
-    <script src="/assets/js/main.js"></script>
+    <script>
+        setTimeout(() => {
+            var overlayer = document.getElementById('overlayer')
+            var preloader = document.getElementById('preloader')
+            preloader.style.display = 'none'
+            overlayer.style.display = 'none'
+        }, 3000)
+
+
+
+    </script>
+    <script src="/assets/js/modal-msg.js"></script>
+
 </body>
 
 </html>
