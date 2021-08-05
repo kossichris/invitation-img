@@ -58,7 +58,9 @@ html {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-   
+    margin-left: 19px;
+    margin-top: -21px;
+    
     /* Position the tooltip text*/
     position: absolute;
     z-index: 1;
