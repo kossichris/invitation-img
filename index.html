@@ -72,25 +72,27 @@
                 <textarea name="" id="" cols="30" rows="4"></textarea>
             </div>
             <div class="modal-footer2">
-                <button class="modal-btn2">Envoyer</button>
+                <button class="modal-btn2" onclick="myFunction()">Envoyer</button>
 
             </div>
         </div>
 
     </div>
     <div class="button-container">
-
-
         <div class="menu">
-            <div id="fab-msg" class="fab-msg">
-                <a id="myBtnChat">
+            <div id="fab-msg" class="fab-msg tooltip">
+                <a class="" id="myBtnChat">
                     <img class="chat-img" src="/assets/img/speech-bubble.png" alt="">
+                    <span class="tooltiptext">Envoyer un message</span>
+
                 </a>
             </div>
-            <div id="fab-confirm" class="fab-confirm">
+            <div id="fab-confirm" class="fab-confirm tooltip">
                 <!--button id="myBtn">open</button-->
                 <a id="myBtn">
                     <img class="user-img" src="/assets/img/user.png" alt="">
+                    <span class="tooltiptext">Confirmation</span>
+
                 </a>
             </div>
             <div class="pop-div">
@@ -110,6 +112,10 @@
             </div>
         </div>
     </div>
+
+
+    <!-- The actual snackbar -->
+    <div id="snackbar">Message envoyé!</div>
 
     <div id="overlayer">
     </div>
@@ -173,9 +179,16 @@
             preloader.style.display = 'none'
             overlayer.style.display = 'none'
         }, 3000)
-
-
-
+    </script>
+    <script>
+        function myFunction() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
     </script>
     <script src="/assets/js/modal-msg.js"></script>
     <script src="/assets/js/modal-confirm.js"></script>
